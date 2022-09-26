@@ -10,6 +10,11 @@
     <link rel="dns-prefetch" href="https://cdn.shopify.com" crossorigin />
     <link rel="dns-prefetch" href="https://unpkg.com" crossorigin />
 
+    <link
+      rel="stylesheet"
+      href="{{ 'theme.css' | asset_url }}"
+    >
+
     {{ content_for_header }}
   </head>
   <body>
@@ -20,5 +25,10 @@
 
         {% section 'footer' %}
     </main>
+
+    <script 
+      src="{{ 'theme.js' | asset_url }}"
+      defer="defer"
+    ></script>
   </body>
 </html>
