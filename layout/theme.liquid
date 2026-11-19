@@ -8,11 +8,15 @@
     <link rel="canonical" href="{{ canonical_url }}" />
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.shopify.com" crossorigin />
-    <link rel="dns-prefetch" href="https://unpkg.com" crossorigin />
-
     {{ content_for_header }}
+
+    
+    {% if shop.favicon %}
+      <link rel="shortcut icon" href="{{ shop.favicon | img_url: '32x32' }}" type="image/png" />
+    {% endif %}
   </head>
   <body>
+    {{ 'dist/main.css' | asset_url }}
     <main class="alphin-site">
         {% section 'header' %}
 
